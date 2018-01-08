@@ -61,7 +61,7 @@ em 这个单位最常见的错误就是会认为是以父元素的字体大小
 在很多地方，我们经常需要元素的大小随着浏览器窗口大小调整。我们平常会使用百分比这个单位。但是问题在于，百分比这个单位是相对于父元素的大小来设置的。对于块级元素来说，如果不设置宽度，默认就是占满父元素的空间，这没什么大问题。但是高度就不同了，如果你没有设置高度，那么默认是根据内容多少来确定的。所以当你需要高度随着浏览器窗口的高度变化时，问题就有点棘手了，要么你用JS获取当前浏览器的高度，然后通过绝对大小来更改，要么就一层一层地给每一个元素设置 `height: 100%;` 来保证最终的那个元素得到高度参考是浏览器窗口的高度。现在有了`vh`这个单位，就不再需要考虑父级元素的 `height` 值，也不需要自己去获取浏览器高度。  
 我认为这两个单位实用价值还是挺高的，在写css的时候，经常会被高度和宽度这两个样式弄得很头痛。要保证界面有一定自适应效果，就不能用 `px`，用百分比又得确保父元素的高度和宽度是正确的。所以用好 `vw` 和 `vh` 能保证样式效果还不用考虑其他问题。
 
-参考文章：
-> [CSS: em, px, pt, cm, in…](https://www.w3.org/Style/Examples/007/units.en.html#font-size)  
-> [CSS values and units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)    
-> [综合指南: 何时使用 Em 与 Rem](https://webdesign.tutsplus.com/zh-hans/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984)
+## 参考文章：
+ [CSS: em, px, pt, cm, in…](https://www.w3.org/Style/Examples/007/units.en.html#font-size)  
+ [CSS values and units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)    
+ [综合指南: 何时使用 Em 与 Rem](https://webdesign.tutsplus.com/zh-hans/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984)
