@@ -3,12 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 乌鸦
+title: 小新
 subtitle:
-- Where I live, Where I write
-- 开门，基佬送温暖
+- Live free or die
 description: 
-author: Codert
+author: 小新
 language: zh
 timezone: Asia/Shanghai
 
@@ -74,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: lightit
+theme: bear
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

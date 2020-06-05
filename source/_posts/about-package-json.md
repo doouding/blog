@@ -2,14 +2,15 @@
 title: (编译)关于package-lock.json的一切
 date: 2018-01-09 23:04:10
 tags:
+- javascript
+- npm
 ---
 
    文章编译自: [Everything You Wanted To Know About package-lock.json But Were Too Afraid To Ask](https://medium.com/@Quigley_Ja/everything-you-wanted-to-know-about-package-lock-json-b81911aa8ab8)
 
-   意译，尽量翻译地看起来没有翻译腔的痕迹。。
-
-## 介绍
 你把npm更新到`v5.x.x`以后，会出现一种新的自动生成文件 - `Package-lock.json`。你如果打开这个文件，会发现它看着像`package.json`里面的依赖，不过看着更啰嗦。如果你不去管他，迟早你都会出现依赖的问题，比如依赖的版本没有安装正确。大多数人是直接删除掉`package-lock.json`，然后重新运行`npm install`来解决问题，这样也行，但是我们还是要搞清楚看这个文件是看什么的。
+
+<!-- more -->
 
 ## 总结
 - 如果你用的是`npm^5.x.x`的版本，它默认就会生成`package-lock.json`这个文件

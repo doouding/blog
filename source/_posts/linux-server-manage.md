@@ -1,11 +1,18 @@
 ---
-title: Linux服务与自启动
+title: Linux 服务与自启动
 date: 2017-05-24 16:10:43
 tags:
+- linux
 ---
 
+尝试厘清一下如何在 Linux 中配置一个自启动的服务以及相关概念
+
+<!-- more -->
+
 ## 后台程序
+
 自动启动不免涉及到后台程序
+
 ### 后台执行与暂停
 我们如果希望一个前台程序切换到后台暂停，那么可以使用快捷键`Ctrl + Z`来使当前执行的任务切换到后台暂停运行。
 如果想让一个命令在后台执行，可以在后面添加一个`&`符号。这样子他就会在后台慢慢执行，执行完成后会有一个提示信息。例如
@@ -15,6 +22,7 @@ $ sslocal -c /etc/shadowsocks.json &
 ```
 
 ### 后台操作
+
 切换到后台的任务可以通过`jobs`命令来查看。每个后台任务条目最前面有一个任务号，可以通过`fg %任务号`来使后台任务切换到前台。
 我们刚刚说道`Ctrl + Z`是使程序到后台暂停。那么如果我想让它在后台执行需要怎么做呢？很简单，使用`bg %任务号`就能够使`Stopped`状态的后台程序变成`Running`状态
 
@@ -38,7 +46,9 @@ $ nohup sslocal -c /etc/shadowsocks.json &
 ```
 
 ## System V的服务管理
-    注意：CentOS 7，Fedora 15等开始采用systemd来管理服务。抛弃了init管理的模式。
+
+> 注意：CentOS 7，Fedora 15等开始采用systemd来管理服务。抛弃了init管理的模式。
+
 以下内容来自于鸟哥的Linux私房菜旧版：[初识系统服务](http://linux.vbird.org/linux_basic/0560daemons/0560daemons-centos5.php)，新版加入了`Systemd`的管理方式所以对原本的`init`内容有所省略。
 
 System V采用`init`管理方式。系统第一个唤起的程序是`init`。然后这个`init`程序负责唤醒系统所需要的服务。

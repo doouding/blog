@@ -2,9 +2,12 @@
 title: z-index层叠顺序小小的分析
 date: 2016-04-03 18:21:50
 tags:
+- css
 ---
 
-下文如果没有特别说明，`static`元素指的就是设置`postion:static`的元素或者没有设置`position`的元素。设置了`position`的元素指的是设置了除`static`以外值的元素
+下文如果没有特别说明，`static`元素指的就是设置`postion:static`的元素或者没有设置`position`的元素。设置了`position`的元素指的是设置了除`static`以外值的元素。
+
+<!-- more -->
 
 ## 默认规则
 如果不对节点设置`position`属性，文档流后面的元素会遮挡住前面的元素。同时对`static`元素设置`z-index`没有任何效果。对已经设置了`position`定位规则，如果没有设置`z-index`则后面的元素仍然会遮住前面的元素。
